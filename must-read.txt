@@ -1,0 +1,26 @@
+Quick Notes:
+
+Once the seriver is running on port 4001, 
+go the URL: http://127.0.0.1:4001/  -->> a home page is disaplyed with register, login and logout links
+click on register, and enter username and password to register
+(you can check the database whether it stored or not)
+ex: _id: 60d4811a5dd3128b96f85ab0
+pro:false
+username:"uday"
+salt:"1609de382a3688b1876270aa86c7ee301d3a546bf1eb82fccf3e4727705d8a77"
+hash:"9afcb09c144e3a3435fd4d742b318a86f9f87cc96c4d22ee58a6a5e7d22b95db0f59c4..."
+
+By default, pro:false, it indicates, the user is not a pro user.
+
+Once registered, login again, you will find the payment link to upgrade to pro
+
+RazorPay API is used as the Payment gateway,
+
+CLick on pay now, enter the Test Debit card details, uncheck the save card option
+
+Test card details: 5104 0600 0000 0008 CVV: random 3 digit number, expity date: any future date
+
+Once the payment is success, the pro field becomes true (can find in DB)
+
+Then, a page is displayed that is available only for pro users
+
